@@ -40,10 +40,19 @@ export default function Hero() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" className="rounded-full px-8 text-lg h-12 bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/25 group">
+            <Button 
+              size="lg" 
+              className="rounded-full px-8 text-lg h-12 bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/25 group cursor-pointer"
+              onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Get Started <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button size="lg" variant="outline" className="rounded-full px-8 text-lg h-12 border-2 hover:bg-muted/50">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="rounded-full px-8 text-lg h-12 border-2 hover:bg-muted/50 cursor-pointer"
+              onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Our Services
             </Button>
           </div>
